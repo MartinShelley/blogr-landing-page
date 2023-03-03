@@ -4,17 +4,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <title>Frontend Mentor | [Blogr]</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header>
-    <nav></nav>
+    <nav>
+      <div class="left-nav">
+        <img class="logo" src="assets/logo.svg" alt="Blogr Landing Page">
+        <ul>
+          <li id="dropdown1" class="main-nav-heading">
+            <a href="#">Product
+              <img class="arrow arrow-image-light" src="assets/icon-arrow-light.svg">
+              <img class="arrow arrow-image-dark" src="assets/icon-arrow-dark.svg">
+            </a>
+            <ul id="subNav1" class="dropdown-menu" aria-labelledby="dropdown1">
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </li>
+          <li id="dropdown2" class="main-nav-heading">
+            <a href="#">Company
+              <img class="arrow arrow-image-light" src="assets/icon-arrow-light.svg">
+              <img class="arrow arrow-image-dark" src="assets/icon-arrow-dark.svg">
+            </a>
+            <ul id="subNav2" class="dropdown-menu">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </li>
+          <li id="dropdown3" class="main-nav-heading">
+            <a href="#">Connect
+              <img class="arrow arrow-image-light" src="assets/icon-arrow-light.svg">
+              <img class="arrow arrow-image-dark" src="assets/icon-arrow-dark.svg">
+            </a>
+            <ul id="subNav3" class="dropdown-menu">
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="right-nav">
+        <ul>
+          <li>
+            <a href="#">
+              <button type="button" class="account-btn login">
+                Login
+              </button>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <button type="button" class="account-btn sign-up active">
+                Sign Up
+              </button>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <img src="assets/icon-hamburger.svg" class="hamburger-icon">
+    </nav>
   </header>
-  <main></main>
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <div class="headings">
+          <h1 class="mainHeading">A modern publishing platform</h1>
+          <h4>Grow your audience and build your online brand</h4>
+        </div>
+        <div class="mainHeadingButtons">
+          <button type="button" class="btn start"><span>Start for Free</span></button>
+          <button type="button" class="btn learn"><span>Learn More</span></button>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer></footer>
 </body>
+
 
 </html>
