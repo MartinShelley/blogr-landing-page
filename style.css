@@ -38,6 +38,29 @@ h4 {
   line-height: 30.64px;
 }
 
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Ubuntu";
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button-active {
+  background-color: white;
+  color: #FF505C;
+  padding: 15px 40px;
+  border-radius: 28px;
+}
+
+.button-active:hover {
+  background-color: #FF7B86;
+  color: #fff;
+  opacity: 1;
+}
+
 header {
   border-radius: 0 0 0 75px;
   position: relative;
@@ -69,6 +92,7 @@ header nav .left-nav ul .main-nav-heading .arrow-image-dark {
 header nav .left-nav ul .main-nav-heading a {
   color: white;
   padding-bottom: 20px;
+  opacity: 0.75;
 }
 header nav .left-nav ul .main-nav-heading .dropdown-menu {
   display: none;
@@ -89,12 +113,17 @@ header nav .left-nav ul .main-nav-heading .dropdown-menu a {
 header nav .left-nav ul .main-nav-heading .dropdown-menu a:hover {
   font-weight: 700;
 }
-header nav .left-nav ul .main-nav-heading:hover > .dropdown-menu {
-  display: block;
+header nav .left-nav ul .main-nav-heading:hover > a {
+  text-decoration: underline;
+  opacity: 1;
 }
-header nav .left-nav ul .main-nav-heading:hover a > .arrow-image-light {
+header nav .left-nav ul .main-nav-heading:hover > a .arrow-image-light {
   transform: rotate(180deg);
   transition: 0.6s;
+  opacity: 1;
+}
+header nav .left-nav ul .main-nav-heading:hover > .dropdown-menu {
+  display: block;
 }
 header nav .right-nav ul {
   display: flex;
@@ -103,26 +132,14 @@ header nav .right-nav ul {
   margin: 0;
   padding: 0;
 }
-header nav .right-nav .account-btn {
-  border-radius: 28px;
-  border-color: transparent;
-  background-color: transparent;
-  color: white;
-  font-size: 16px;
-  font-weight: 700;
-  font-family: "Ubuntu";
-  cursor: pointer;
-}
-header nav .right-nav .sign-up {
-  background-color: white;
-  color: #FF505C;
-  padding: 15px 40px;
+header nav .right-nav ul #login:hover {
+  opacity: 0.75;
 }
 header nav .hamburger-icon {
   display: none;
 }
 
-main #hero {
+#hero {
   position: fixed;
   top: 0;
   width: 100%;
@@ -133,7 +150,7 @@ main #hero {
   border-radius: 0 0 0 75px;
   color: white;
 }
-main #hero .hero-content {
+#hero .hero-content {
   width: -moz-fit-content;
   width: fit-content;
   transform: translate(-50%, -50%);
@@ -141,13 +158,31 @@ main #hero .hero-content {
   top: 50%;
   left: 50%;
 }
-main #hero .hero-content .headings {
+#hero .hero-content .headings {
   margin-bottom: 43px;
 }
-main #hero .hero-content .headings h1 {
+#hero .hero-content .headings h1 {
   margin: 0;
 }
-main #hero .hero-content .headings h4 {
+#hero .hero-content .headings h4 {
   margin: 0;
   text-align: center;
+}
+#hero .hero-content .hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+#hero .hero-content .hero-buttons #start-hero-button {
+  padding: 15px 16px;
+}
+#hero .hero-content .hero-buttons #learn-hero-button {
+  border-radius: 28px;
+  border: 1px solid #fff;
+  padding: 15px 25px;
+}
+#hero .hero-content .hero-buttons #learn-hero-button:hover {
+  background-color: #fff;
+  color: #FF7B86;
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

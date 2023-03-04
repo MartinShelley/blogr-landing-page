@@ -39,15 +39,32 @@ h4 {
   line-height: 30.64px;
 }
 
+.button {
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Ubuntu';
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button-active {
+  background-color: white;
+  color: #FF505C;
+  padding: 15px 40px;
+  border-radius: 28px;
+}
+
+.button-active:hover {
+  background-color: #FF7B86;
+  color: #fff;
+  opacity: 1;
+}
+
+
 header {
-  //background: url(images/bg-pattern-intro.svg),
-  //linear-gradient(90deg, rgba(255, 143, 112, 1) 10%, rgba(255, 61, 84, 1) 58%);
-  // height: 500px;
-  // margin: auto auto 75px;
-  //background-size: 3100px;
-  //background-position: -351px -1346px;
   border-radius: 0 0 0 75px;
-  //color: white;
   position: relative;
   z-index: 20;
 
@@ -67,7 +84,6 @@ header {
         padding: 0;
         margin: 0;
         gap: 32px;
-        //   // margin-bottom: 20px;
 
         .main-nav-heading {
 
@@ -82,6 +98,7 @@ header {
           a {
             color: white;
             padding-bottom: 20px;
+            opacity: 0.75;
           }
 
           .dropdown-menu {
@@ -107,14 +124,21 @@ header {
           }
         }
 
+        .main-nav-heading:hover>a {
+          text-decoration: underline;
+          opacity: 1;
+
+          .arrow-image-light {
+            transform: rotate(180deg);
+            transition: 0.6s;
+            opacity: 1;
+          }
+        }
+
         .main-nav-heading:hover>.dropdown-menu {
           display: block;
         }
 
-        .main-nav-heading:hover a>.arrow-image-light {
-          transform: rotate(180deg);
-          transition: 0.6s;
-        }
       }
     }
 
@@ -126,24 +150,10 @@ header {
         gap: 32px;
         margin: 0;
         padding: 0;
-      }
 
-      .account-btn {
-        border-radius: 28px;
-        border-color: transparent;
-        background-color: transparent;
-        color: white;
-        font-size: 16px;
-        font-weight: 700;
-        font-family: 'Ubuntu';
-        // height: 30px;
-        cursor: pointer;
-      }
-
-      .sign-up {
-        background-color: white;
-        color: #FF505C;
-        padding: 15px 40px;
+        #login:hover {
+          opacity: 0.75;
+        }
       }
 
     }
@@ -154,42 +164,62 @@ header {
   }
 }
 
-main {
-
-  #hero {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: url(assets/bg-pattern-intro.svg),
-      linear-gradient(90deg, rgba(255, 143, 112, 1) 10%, rgba(255, 61, 84, 1) 58%);
-    height: 600px;
-    background-size: 3100px;
-    background-position: -351px -1346px;
-    border-radius: 0 0 0 75px;
-    color: white;
+#hero {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: url(assets/bg-pattern-intro.svg),
+    linear-gradient(90deg, rgba(255, 143, 112, 1) 10%, rgba(255, 61, 84, 1) 58%);
+  height: 600px;
+  background-size: 3100px;
+  background-position: -351px -1346px;
+  border-radius: 0 0 0 75px;
+  color: white;
 
 
-    .hero-content {
-      width: fit-content;
-      transform: translate(-50%, -50%);
-      position: relative;
-      top: 50%;
-      left: 50%;
+  .hero-content {
+    width: fit-content;
+    transform: translate(-50%, -50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
 
-      .headings {
-        margin-bottom: 43px;
+    .headings {
+      margin-bottom: 43px;
 
-        h1 {
-          margin: 0;
-        }
+      h1 {
+        margin: 0;
+      }
 
-        h4 {
-          margin: 0;
-          text-align: center;
+      h4 {
+        margin: 0;
+        text-align: center;
 
-        }
       }
     }
 
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      #start-hero-button {
+        padding: 15px 16px;
+      }
+
+      #learn-hero-button {
+        border-radius: 28px;
+        border: 1px solid #fff;
+        padding: 15px 25px;
+
+        &:hover {
+          background-color: #fff;
+          color: #FF7B86;
+          opacity: 1;
+        }
+      }
+
+
+    }
   }
 }
