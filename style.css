@@ -7,6 +7,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 li {
@@ -26,6 +27,7 @@ h1 {
 
 h2 {
   font-size: 40px;
+  letter-spacing: -1.2px;
 }
 
 h3 {
@@ -36,6 +38,12 @@ h4 {
   font-size: 20px;
   font-weight: 400;
   line-height: 30.64px;
+}
+
+p {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
 }
 
 .button {
@@ -62,7 +70,7 @@ h4 {
 }
 
 header {
-  border-radius: 0 0 0 75px;
+  border-radius: 0 0 0 100px;
   position: absolute;
   width: 100%;
   z-index: 20;
@@ -190,7 +198,7 @@ header nav .hamburger-icon {
 }
 
 #slot-1 {
-  margin-top: 71px;
+  margin: 71px 0 213px;
 }
 #slot-1 .content {
   display: grid;
@@ -235,4 +243,36 @@ header nav .hamburger-icon {
   max-height: 882px;
   position: absolute;
   right: -240px;
+}
+
+#slot-2 {
+  background: linear-gradient(90deg, rgb(44, 45, 63), rgb(63, 65, 96));
+  border-radius: 0 100px;
+  height: 400px;
+}
+#slot-2 .infrastructure {
+  display: grid;
+  grid-template-columns: auto auto;
+  background: url(assets/bg-pattern-circles.svg);
+  height: 100%;
+  background-position: -225px -500px;
+  background-repeat: repeat-y;
+  color: white;
+  position: relative;
+  z-index: 1;
+  justify-content: center;
+  -moz-column-gap: 98px;
+       column-gap: 98px;
+}
+#slot-2 .infrastructure img {
+  transform: translateY(-49px);
+}
+#slot-2 .infrastructure article {
+  max-width: 540px;
+  height: -moz-fit-content;
+  height: fit-content;
+  transform: translateY(50%);
+}
+#slot-2 .infrastructure article h2 {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
