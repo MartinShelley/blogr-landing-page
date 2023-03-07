@@ -27,12 +27,14 @@ $copy-color: #4C5862;
 
 :root {
   font-family: "Overpass", "Ubuntu";
-  margin-left: auto;
-  margin-right: auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
   overflow-x: hidden;
 }
 
@@ -71,17 +73,6 @@ p {
   letter-spacing: 0.5px;
   line-height: 28px;
 }
-
-// section {
-//   text-align: center;
-
-//   .content {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 125px;
-//   }
-// }
 
 .button {
   font-size: 16px;
@@ -330,7 +321,6 @@ header {
       rgba(44, 45, 63, 1),
       rgba(63, 65, 96, 1));
   border-radius: 0 100px;
-  // margin: 51px 0 100px;
   height: 400px;
 
   .infrastructure {
@@ -356,7 +346,7 @@ header {
       transform: translateY(50%);
 
       h2 {
-        margin: 0;
+        margin-bottom: 5px;
       }
     }
   }
@@ -368,7 +358,7 @@ header {
   grid-template-rows: auto auto;
   align-items: center;
   height: 786px;
-  margin-top: 116px;
+  margin: 116px 0 123px;
 
   picture {
     position: relative;
@@ -381,4 +371,42 @@ header {
     grid-row: 1 / 3;
     max-width: 540px;
   }
+}
+
+footer {
+  background-color: hsl(240, 10%, 16%);
+  border-radius: 0 75px 0 0;
+  padding: 70px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 184px;
+  justify-content: center;
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    width: 825px;
+
+    img {
+      // padding-top: 50px;
+      // padding-left: 125px;
+    }
+
+    h4 {
+      margin-bottom: 21px;
+      color: #fff
+    }
+
+    a {
+      color: #fff;
+      opacity: 0.75;
+      line-height: 33px;
+      font-size: 15px;
+      font-family: "Ubuntu";
+      font-weight: 400;
+    }
+  }
+
+
 }
