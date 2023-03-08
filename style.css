@@ -17,6 +17,7 @@ li {
 }
 
 a {
+  font-family: "Ubuntu", "Overpass";
   text-decoration: none;
 }
 
@@ -72,7 +73,7 @@ p {
 }
 
 header {
-  border-radius: 0 0 0 100px;
+  border-bottom-left-radius: 100px;
   position: absolute;
   width: 100%;
   z-index: 20;
@@ -101,7 +102,6 @@ header nav .left-nav ul .main-nav-heading .arrow-image-dark {
   display: none;
 }
 header nav .left-nav ul .main-nav-heading a {
-  font-family: "Ubuntu";
   font-weight: 700;
   color: white;
   padding-bottom: 25px;
@@ -122,7 +122,6 @@ header nav .left-nav ul .main-nav-heading .dropdown-menu a {
   font-size: 15px;
   font-weight: 400;
   line-height: 33px;
-  font-family: "Ubuntu", "Overpass";
 }
 header nav .left-nav ul .main-nav-heading .dropdown-menu a:hover {
   font-weight: 700;
@@ -146,8 +145,11 @@ header nav .right-nav ul {
   margin: 0;
   padding: 0;
 }
-header nav .right-nav ul #login:hover {
+header nav .right-nav ul #login {
   opacity: 0.75;
+}
+header nav .right-nav ul #login:hover {
+  opacity: 1;
 }
 header nav .hamburger-icon {
   display: none;
@@ -159,7 +161,7 @@ header nav .hamburger-icon {
   height: 600px;
   background-size: 3100px;
   background-position: -351px -1346px;
-  border-radius: 0 0 0 75px;
+  border-bottom-left-radius: 100px;
   color: white;
 }
 #hero .hero-content {
@@ -300,7 +302,7 @@ header nav .hamburger-icon {
 
 footer {
   background-color: hsl(240, 10%, 16%);
-  border-radius: 0 75px 0 0;
+  border-radius: 0 100px 0 0;
   padding: 70px 0;
   display: flex;
   align-items: flex-start;
@@ -322,6 +324,8 @@ footer nav a {
   opacity: 0.75;
   line-height: 33px;
   font-size: 15px;
-  font-family: "Ubuntu";
   font-weight: 400;
+}
+footer nav a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

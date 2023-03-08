@@ -43,6 +43,7 @@ li {
 }
 
 a {
+  font-family: "Ubuntu", "Overpass";
   text-decoration: none;
 }
 
@@ -99,7 +100,7 @@ p {
 
 
 header {
-  border-radius: 0 0 0 100px;
+  border-bottom-left-radius: 100px;
   position: absolute;
   width: 100%;
   z-index: 20;
@@ -132,7 +133,6 @@ header {
           }
 
           a {
-            font-family: "Ubuntu";
             font-weight: 700;
             color: white;
             padding-bottom: 25px;
@@ -154,7 +154,6 @@ header {
               font-size: 15px;
               font-weight: 400;
               line-height: 33px;
-              font-family: "Ubuntu", "Overpass";
             }
 
             a:hover {
@@ -190,8 +189,12 @@ header {
         margin: 0;
         padding: 0;
 
-        #login:hover {
+        #login {
           opacity: 0.75;
+        }
+
+        #login:hover {
+          opacity: 1;
         }
       }
 
@@ -204,15 +207,13 @@ header {
 }
 
 #hero {
-  // position: fixed;
-  // top: 0;
   width: 100%;
   background: url(assets/bg-pattern-intro.svg),
     linear-gradient(90deg, rgba(255, 143, 112, 1) 10%, rgba(255, 61, 84, 1) 58%);
   height: 600px;
   background-size: 3100px;
   background-position: -351px -1346px;
-  border-radius: 0 0 0 75px;
+  border-bottom-left-radius: 100px;
   color: white;
 
 
@@ -375,7 +376,7 @@ header {
 
 footer {
   background-color: hsl(240, 10%, 16%);
-  border-radius: 0 75px 0 0;
+  border-radius: 0 100px 0 0;
   padding: 70px 0;
   display: flex;
   align-items: flex-start;
@@ -398,10 +399,11 @@ footer {
       opacity: 0.75;
       line-height: 33px;
       font-size: 15px;
-      font-family: "Ubuntu";
       font-weight: 400;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-
-
 }
