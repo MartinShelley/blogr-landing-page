@@ -14,7 +14,7 @@
   }
 
   @else if $device ==mobile {
-    @media screen and (max-width: 414px) {
+    @media only screen and (max-width: 414px) {
       @content
     }
   }
@@ -380,8 +380,8 @@ footer {
   padding: 70px 0;
   display: flex;
   align-items: flex-start;
-  gap: 184px;
-  justify-content: center;
+  // gap: 100px;
+  justify-content: space-evenly;
 
   nav {
     display: grid;
@@ -405,5 +405,16 @@ footer {
         text-decoration: underline;
       }
     }
+  }
+}
+
+
+@include breakpoint(mobile) {
+  #desktop-nav {
+    display: none;
+  }
+
+  .hamburger-icon {
+    display: block;
   }
 }

@@ -306,8 +306,7 @@ footer {
   padding: 70px 0;
   display: flex;
   align-items: flex-start;
-  gap: 184px;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 footer nav {
   display: grid;
@@ -328,4 +327,13 @@ footer nav a {
 }
 footer nav a:hover {
   text-decoration: underline;
+}
+
+@media only screen and (max-width: 414px) {
+  #desktop-nav {
+    display: none;
+  }
+  .hamburger-icon {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
