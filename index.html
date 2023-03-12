@@ -11,10 +11,10 @@
 
 <body>
   <header>
-    <nav id="desktop-nav">
+    <nav>
       <div class="left-nav">
         <img class="logo" src="assets/logo.svg" alt="Blogr Landing Page">
-        <ul>
+        <ul class="desktop-nav">
           <li id="dropdown1" class="main-nav-heading">
             <a href="#">Product<svg xmlns="http://www.w3.org/2000/svg" class="arrow arrow-image-light" width="10"
                 height="7" opacity=".75">
@@ -65,7 +65,7 @@
           </li>
         </ul>
       </div>
-      <div class="right-nav">
+      <div class="right-nav desktop-nav">
         <ul>
           <li>
             <a href="#">
@@ -83,7 +83,9 @@
           </li>
         </ul>
       </div>
-      <img src="assets/icon-hamburger.svg" class="hamburger-icon">
+      <div class="mobile-nav">
+        <img src="assets/icon-hamburger.svg" class="hamburger-icon">
+      </div>
     </nav>
   </header>
   <main>
@@ -100,8 +102,8 @@
       </div>
     </section>
     <section id="slot-1">
+      <h2>Designed for the future</h2>
       <div class="content">
-        <h2>Designed for the future</h2>
         <article class="copy">
           <section>
             <h3>Introducing an extensible editor</h3>
@@ -148,14 +150,20 @@
         <img src="assets/illustration-laptop-desktop.svg" alt="Free, open, simple" />
       </picture>
       <article>
-        <h3>Free, open, simple</h3>
-        <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
-          features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting tools,
-          and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
-        <h3>Powerful tooling</h3>
-        <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment a
-          breeze, but
-          capable of producing even the most complicated sites.</p>
+        <section>
+          <h3>Free, open, simple</h3>
+          <p>Blogr is a free and open source application backed by a large community of helpful developers. It supports
+            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+            tools,
+            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.</p>
+        </section>
+        <section>
+          <h3>Powerful tooling</h3>
+          <p>Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment
+            a
+            breeze, but
+            capable of producing even the most complicated sites.</p>
+        </section>
       </article>
     </section>
   </main>
