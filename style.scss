@@ -204,6 +204,7 @@ header {
   gap: 32px;
 }
 
+.hamburger-icon,
 .mobile-nav {
   display: none;
 }
@@ -451,13 +452,68 @@ footer {
     nav {
       justify-content: space-between;
     }
+
+    .mobile-nav {
+      margin-top: 37px;
+
+      .mobile-dropdown {
+        background-color: #fff;
+        padding: 24px;
+        min-width: 324px;
+        margin: 0 75px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+        .dropdown-menu {
+          display: none;
+        }
+
+        .mobile-account-section {
+          padding-top: 24px;
+          border-top: 1px solid #E8E4E4;
+          width: 100%;
+
+          a {
+            text-align: center;
+          }
+
+
+          #mobile-login {
+            color: #1F3E5A;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 28px;
+            letter-spacing: 0px;
+            background-color: transparent;
+            border: none;
+            margin-bottom: 24px;
+          }
+
+          #mobile-sign-up {
+            padding: 15px 40px;
+            background: linear-gradient(90deg, #FF8F71 10%, #FF3E55 58%);
+            color: #fff;
+            border-radius: 28px;
+            border: none;
+            font-family: Ubuntu;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 0px;
+          }
+        }
+
+      }
+    }
   }
 
   .desktop-nav {
     display: none;
   }
 
-  .mobile-nav {
+  .hamburger-icon {
     display: block;
   }
 
@@ -566,6 +622,14 @@ footer {
   #hero {
     background-size: 150%;
     background-position: 0% -150%;
+  }
+
+  #slot-3 {
+    gap: 80px;
+
+    picture {
+      transform: scale(1.5);
+    }
   }
 
   footer {

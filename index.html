@@ -83,10 +83,68 @@
           </li>
         </ul>
       </div>
-      <div class="mobile-nav">
-        <img src="assets/icon-hamburger.svg" class="hamburger-icon">
+      <img src="assets/icon-hamburger.svg" class="hamburger-icon">
       </div>
     </nav>
+    <div class="mobile-nav">
+      <ul class="mobile-dropdown">
+        <li id="mobile-dropdown-1" class="mobile-nav-section">
+          <a href="#">Product<svg xmlns="http://www.w3.org/2000/svg" class="arrow arrow-image-light" width="10"
+              height="7" opacity=".75">
+              <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l4 4 4-4" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="arrow arrow-image-dark" width="10" height="7">
+              <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4" />
+            </svg>
+          </a>
+          <ul id="subNav1" class="dropdown-menu" aria-labelledby="dropdown1">
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </li>
+        <li id="mobile-dropdown-2" class="mobile-nav-section">
+          <a href="#">Company<svg xmlns="http://www.w3.org/2000/svg" class="arrow arrow-image-light" width="10"
+              height="7" opacity=".75">
+              <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l4 4 4-4" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="arrow arrow-image-dark" width="10" height="7">
+              <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4" />
+            </svg>
+          </a>
+          <ul id="subNav2" class="dropdown-menu">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </li>
+        <li id="mobile-dropdown-3" class="mobile-nav-section">
+          <a href="#">Connect<svg xmlns="http://www.w3.org/2000/svg" class="arrow arrow-image-light" width="10"
+              height="7" opacity=".75">
+              <path fill="none" stroke="#FFF" stroke-width="2" d="M1 1l4 4 4-4" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="arrow arrow-image-dark" width="10" height="7">
+              <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4" />
+            </svg>
+          </a>
+          <ul id="subNav3" class="dropdown-menu">
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </li>
+        <div class="mobile-account-section">
+          <a>
+            <li><button id="mobile-login">Login</button></li>
+          </a>
+          <a>
+            <li><button id="mobile-sign-up">Sign Up</button></li>
+          </a>
+        </div>
+      </ul>
   </header>
   <main>
     <section id="hero">
@@ -195,6 +253,7 @@
       <!-- </div> -->
     </nav>
   </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>
