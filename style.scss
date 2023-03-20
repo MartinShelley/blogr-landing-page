@@ -324,7 +324,7 @@ header {
 
   .infrastructure {
     background: url(assets/bg-pattern-circles.svg);
-    background-position: 50% -500px;
+    background-position: -215px -500px;
     background-repeat: no-repeat;
     border-radius: 0 100px;
     display: flex;
@@ -642,6 +642,7 @@ footer {
     }
 
     .infrastructure {
+      background-position: 50% -500px;
       display: flex;
       flex-direction: column;
       align-items: center;
