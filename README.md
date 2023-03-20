@@ -1,6 +1,6 @@
 # Frontend Mentor - Blogr landing page solution
 
-This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). This was the first project I took on from Frontend Mentor a few years ago when I knew I wanted to switch careers and become a front end developer. Looking back at my original attempt at this challenge, I was embarrassed at how bad it was, but it was also reassuring seeing how far I have come. So had to put it right and give this challenge another go!
+This is a solution to the [Blogr landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/blogr-landing-page-EX2RLAApP). This was the first project I took on from Frontend Mentor a few years ago when I knew I wanted to switch careers and become a front-end developer. Looking back at my original attempt at this challenge, I was embarrassed at how bad it was, but it was also reassuring to see how far I had come. So had to put it right and give this challenge another go!
 
 ## Table of contents
 
