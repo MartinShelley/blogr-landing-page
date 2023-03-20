@@ -9,7 +9,6 @@
       if (e.keyCode == 13) {
         e.target.nextElementSibling.style.display = "block";
       }
-      console.log(e);
     });
   });
 
@@ -33,14 +32,11 @@
 
   document.querySelectorAll('.nav-option').forEach(function (item) {
     item.addEventListener('click', function (e) {
-      console.log(e.currentTarget);
       if (!e.currentTarget.classList.contains('nav-option-selected')) {
-        console.log("open");
         e.currentTarget.classList.add('nav-option-selected');
         e.currentTarget.children[0].children[0].classList.add('rotate');
       }
       else {
-        console.log("close");
         e.currentTarget.classList.remove('nav-option-selected');
         e.currentTarget.children[0].children[0].classList.remove('rotate');
       }
