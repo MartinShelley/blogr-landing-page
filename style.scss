@@ -32,9 +32,10 @@ $copy-color: #4C5862;
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
+main {
   overflow-x: hidden;
 }
 
@@ -57,6 +58,7 @@ h1 {
 h2 {
   font-size: 40px;
   letter-spacing: -1.2px;
+  line-height: 61.28px;
 }
 
 h3 {
@@ -105,11 +107,25 @@ header {
   width: 100%;
   z-index: 20;
 
+  .skip-to-content-link {
+    background: #fff;
+    height: 30px;
+    left: 0;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+
+    &:focus {
+      transform: translateY(0%);
+    }
+  }
+
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 59px 175px 0;
+    padding: 59px 165px 0;
 
     .left-nav {
       display: flex;
@@ -215,17 +231,17 @@ header {
     linear-gradient(90deg, rgba(255, 143, 112, 1) 10%, rgba(255, 61, 84, 1) 58%);
   height: 600px;
   background-size: 3100px;
-  background-position: -351px -1346px;
+  background-position: 25% -1346px;
   border-bottom-left-radius: 100px;
   color: white;
 
 
   .hero-content {
-    width: fit-content;
-    transform: translate(-50%, -50%);
-    position: relative;
-    top: 50%;
-    left: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
     .headings {
       margin-bottom: 43px;
@@ -267,7 +283,7 @@ header {
 
 #slot-1 {
   margin: 71px 0 213px;
-  // padding: 0 175px;
+  padding-top: 71px;
 
 
   h2 {
@@ -275,24 +291,26 @@ header {
     text-align: center;
     grid-row: 1 / 2;
     grid-column: 1 / 3;
+    margin-bottom: 50px;
     // margin: 79px 0 93px;
   }
 
   .content {
-    // column-gap: 125px;
+    column-gap: 125px;
     display: grid;
-    grid-template-columns: 1fr 0.5fr;
-    // grid-template-rows: 0.25fr 2fr;
+    grid-template-columns: auto auto;
     position: relative;
     align-items: center;
+
 
     .copy {
       // width: 100%;
       max-width: 540px;
       text-align: left;
       grid-column: 1 / 2;
-      grid-row: 2 / 3;
-      margin: 93px 0 0 175px;
+      // grid-row: 2 / 3;
+      margin-left: 165px;
+      padding-top: 70px;
 
       // section:nth-child(1) {
       section {
@@ -311,22 +329,18 @@ header {
           margin: 0;
         }
       }
-
     }
 
     picture {
-      grid-row: 1 / 3;
+      // grid-row: 1 / 3;
       grid-column: 2 / 3;
-      // position: relative;
-      // position: absolute;
-      // right: -280px;
-      // right: -50px;
       transform: scale(1.5) translateX(10%);
-      padding-top: 71px;
+      // padding-top: 71px;
 
       img {
         max-width: 100%;
         height: auto;
+        min-width: 300px;
       }
     }
   }
@@ -336,30 +350,38 @@ header {
   background: linear-gradient(90deg,
       rgba(44, 45, 63, 1),
       rgba(63, 65, 96, 1));
+  background-repeat: no-repeat;
   border-radius: 0 100px;
   height: 400px;
+  position: relative;
 
   .infrastructure {
-    display: grid;
-    grid-template-columns: auto auto;
     background: url(assets/bg-pattern-circles.svg);
+    background-position: 50% -500px;
+    background-repeat: no-repeat;
+    border-radius: 0 100px;
+    // display: grid;
+    // grid-template-columns: auto auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 115px;
     height: 100%;
-    background-position: -225px -500px;
-    background-repeat: repeat-y;
     color: white;
-    position: relative;
-    z-index: 1;
-    justify-content: center;
-    column-gap: 98px;
+    // position: relative;
+    // z-index: 1;
+    // justify-content: space-around;
 
     img {
-      transform: translateY(-49px);
+      transform: translateY(40px);
+      margin-left: 125px; //Theres a bit of spacing in the image
     }
 
     article {
       max-width: 540px;
-      height: fit-content;
-      transform: translateY(50%);
+      margin-right: 100px;
+      // height: fit-content;
+      // transform: translateY(50%);
 
       h2 {
         margin-bottom: 5px;
@@ -375,6 +397,8 @@ header {
   align-items: center;
   height: 786px;
   margin: 116px 0 123px;
+  justify-content: space-between;
+  column-gap: 98px;
 
   picture {
     position: relative;
@@ -386,6 +410,11 @@ header {
   article {
     grid-row: 1 / 3;
     max-width: 540px;
+    margin-right: 80px;
+
+    h3 {
+      color: #1F3E5A;
+    }
 
     section:nth-child(1) {
       margin-bottom: 64px;
@@ -407,10 +436,12 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
     width: 825px;
+    font-family: "Ubuntu", "Overpass";
 
     h4 {
       margin-bottom: 21px;
-      color: #fff
+      color: #fff;
+      line-height: 33px;
     }
 
     a {
@@ -427,21 +458,42 @@ footer {
   }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (max-width: 1225px) and (min-width: 1024px) {
+
+  header {
+    nav {
+      padding: 59px 100px 0;
+    }
+  }
+
+  #slot-1 {
+    .content {
+      .copy {
+        margin-left: 100px;
+      }
+    }
+  }
+
   #slot-2 {
     .infrastructure {
-      justify-content: unset;
+      column-gap: 50px;
+
+      img {
+        margin-left: 65px;
+      }
+
+      article {
+        margin-right: 50px;
+      }
     }
+  }
+
+  #slot-3 {
+    column-gap: unset;
   }
 }
 
 @media screen and (max-width: 1023px) {
-
-  h1 {
-    font-size: 36px;
-    line-height: 55px;
-    letter-spacing: -1.08px;
-  }
 
   h4 {
     font-size: 18px;
@@ -456,6 +508,15 @@ footer {
     .mobile-nav {
       margin-top: 37px;
 
+      .mobile-dropdown-background {
+        top: 0;
+        position: absolute;
+        left: 0;
+        height: 100dvh;
+        width: 100dvw;
+        z-index: 0;
+      }
+
       .mobile-dropdown {
         background-color: #fff;
         padding: 24px;
@@ -466,6 +527,8 @@ footer {
         align-items: center;
         gap: 24px;
         box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.243444);
+        position: relative;
+        z-index: 1;
 
         .nav-option {
           display: flex;
@@ -523,8 +586,6 @@ footer {
 
         .nav-option-selected {
           opacity: 0.75;
-
-          span {}
 
           .dropdown-menu {
             display: flex;
@@ -590,13 +651,6 @@ footer {
   #slot-1 {
     margin-bottom: 273px;
 
-    h2 {
-      font-size: 28px;
-      line-height: 43px;
-      letter-spacing: -0.84px;
-      margin-bottom: 38px;
-    }
-
     .content {
       display: flex;
       flex-direction: column-reverse;
@@ -606,6 +660,7 @@ footer {
         text-align: center;
         margin: 0 75px;
         max-width: unset;
+        padding-top: unset;
 
         section {
           p {
@@ -624,9 +679,13 @@ footer {
   #slot-2 {
     height: unset;
 
+    &::before {
+      background-position-x: 50%;
+    }
+
     .infrastructure {
-      background-repeat: no-repeat;
-      background-position: 50% -500px;
+      // background-repeat: no-repeat;
+      // background-position: 50% -500px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -636,6 +695,7 @@ footer {
       img {
         max-height: 347px;
         transform: scale(1.5) translateY(-100px);
+        margin-left: unset;
       }
 
       article {
@@ -647,6 +707,7 @@ footer {
         flex-direction: column;
         padding: 0 75px;
         text-align: center;
+        margin-right: unset;
 
         h2 {
           margin-bottom: 10px;
@@ -668,11 +729,18 @@ footer {
 
     article {
       text-align: center;
+      margin-right: unset;
     }
   }
 }
 
-@media screen and (max-width: 1023px) and (min-width: 769px) {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+
+  h1 {
+    font-size: 48px;
+    line-height: 55px;
+    letter-spacing: -1.08px;
+  }
 
   header {
     nav {
@@ -681,8 +749,24 @@ footer {
   }
 
   #hero {
-    background-size: 150%;
-    background-position: 0% -150%;
+    background-size: 200%;
+    background-position: -175px 50%;
+  }
+
+  #slot-1 {
+    h2 {
+      margin-bottom: 92px;
+    }
+
+    .content {
+      picture {
+        margin-top: 38px;
+      }
+
+      .copy {
+        padding-top: unset;
+      }
+    }
   }
 
   #slot-3 {
@@ -700,6 +784,132 @@ footer {
 
     nav {
       width: 500px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  h1 {
+    font-size: 36px;
+    line-height: 55px;
+    letter-spacing: -1.08px;
+  }
+
+  header {
+    nav {
+      padding: 56px 24px 0;
+    }
+  }
+
+  #hero {
+    background-size: 200%;
+    background-position: -100px;
+
+
+    .hero-content {
+
+      .headings {
+        text-align: center;
+        max-width: calc(100% - 48px);
+        margin: 0 auto 38px;
+      }
+    }
+  }
+
+  #slot-1 {
+    h2 {
+      font-size: 28px;
+      line-height: 43px;
+      letter-spacing: -0.84px;
+      margin-bottom: 38px;
+    }
+
+    .content {
+      picture {
+        transform: unset;
+        margin: 0;
+        padding: 0;
+      }
+
+      .copy {
+        margin: 0 24px;
+      }
+    }
+  }
+
+  #slot-2 {
+    height: 625px;
+
+    .infrastructure {
+      img {
+        max-height: 498px;
+        // width: 75%;
+        // height: auto;
+        transform: translateY(-225px);
+      }
+
+      article {
+        transform: translateY(-250px);
+        padding: 0 24px;
+      }
+    }
+  }
+
+  #slot-3 {
+    height: unset;
+    margin: 79px 24px 0px;
+  }
+
+  footer {
+    margin-top: 100px;
+    padding: 75px 0px;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      gap: 40px;
+
+      a {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #hero {
+    background-size: 1450px;
+    background-position: -400px 35%;
+  }
+
+  #slot-2 {
+    .infrastructure {
+      img {
+        max-height: 410px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 374px) {
+  #slot-2 {
+    .infrastructure {
+      img {
+        max-height: 300px;
+        transform: translateY(-145px);
+      }
+
+      article {
+        transform: translateY(-145px);
+      }
     }
   }
 }

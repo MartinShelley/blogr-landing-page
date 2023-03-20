@@ -11,6 +11,7 @@
 
 <body>
   <header>
+    <a class="skip-to-content-link" href="#slot-1" tabindex="1">Skip to content</a>
     <nav>
       <div class="left-nav">
         <img class="logo" src="assets/logo.svg" alt="Blogr Landing Page">
@@ -60,14 +61,14 @@
         <ul>
           <li>
             <a href="#">
-              <button id="login" type="button" class="button">
+              <button id="login" type="button" class="button" tabindex="-1">
                 Login
               </button>
             </a>
           </li>
           <li>
             <a href="#">
-              <button type="button" class="button button-active">
+              <button type="button" class="button button-active" tabindex="-1">
                 Sign Up
               </button>
             </a>
@@ -78,6 +79,7 @@
       </div>
     </nav>
     <div class="mobile-nav">
+      <div class="mobile-dropdown-background"></div>
       <ul class="mobile-dropdown">
         <li id="mobile-dropdown-1" class="nav-option">
           <span>Product<svg xmlns="http://www.w3.org/2000/svg" class="arrow arrow-image-dark" width="10" height="7">

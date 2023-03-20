@@ -1,6 +1,26 @@
 (function () {
   const hamburgerIcon = document.querySelector('.hamburger-icon');
   const mobileNav = document.querySelector('.mobile-nav');
+  const mobileNavBackground = document.querySelector('.mobile-dropdown-background');
+
+
+  document.querySelectorAll('.desktop-nav .main-nav-heading').forEach((navOption) => {
+    navOption.addEventListener('keydown', function (e) {
+      if (e.keyCode == 13) {
+        e.target.nextElementSibling.style.display = "block";
+      }
+      console.log(e);
+    });
+  });
+
+  document.querySelectorAll('.desktop-nav .main-nav-heading ul li:last-child').forEach((lastOption) => {
+    lastOption.addEventListener('keydown', function (e) {
+      if (e.keyCode == 9) {
+        e.target.offsetParent.style.display = "";
+      }
+    })
+  })
+
 
   hamburgerIcon.addEventListener('click', function (e) {
     if (mobileNav.style.display === "") {
@@ -25,5 +45,9 @@
         e.currentTarget.children[0].children[0].classList.remove('rotate');
       }
     });
+  });
+
+  mobileNavBackground.addEventListener('click', function () {
+    mobileNav.style.display = "";
   });
 })();
