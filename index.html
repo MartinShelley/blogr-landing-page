@@ -11,7 +11,7 @@
 
 <body>
   <header>
-    <a class="skip-to-content-link" href="#slot-1" tabindex="1">Skip to content</a>
+    <a class="skip-to-content-link" href="#slot-1">Skip to content</a>
     <nav>
       <div class="left-nav">
         <img class="logo" src="assets/logo.svg" alt="Blogr Landing Page">
@@ -86,7 +86,7 @@
               <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4" />
             </svg></span>
 
-          <ul id="subNav1" class="dropdown-menu" aria-labelledby="dropdown1">
+          <ul id="mobilesubNav1" class="dropdown-menu" aria-labelledby="dropdown1">
             <li><a href="#">Overview</a></li>
             <li><a href="#">Pricing</a></li>
             <li><a href="#">Marketplace</a></li>
@@ -99,7 +99,7 @@
               <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4" />
             </svg></span>
 
-          <ul id="subNav2" class="dropdown-menu">
+          <ul id="mobilesubNav2" class="dropdown-menu">
             <li><a href="#">About</a></li>
             <li><a href="#">Team</a></li>
             <li><a href="#">Blog</a></li>
@@ -110,7 +110,7 @@
           <span>Connect<svg xmlns="http://www.w3.org/2000/svg" class="arrow arrow-image-dark" width="10" height="7">
               <path fill="none" stroke="#FF7B86" stroke-width="2" d="M1 1l4 4 4-4" />
             </svg></span>
-          <ul id="subNav3" class="dropdown-menu">
+          <ul id="mobilesubNav3" class="dropdown-menu">
             <li><a href="#">Contact</a></li>
             <li><a href="#">Newsletter</a></li>
             <li><a href="#">LinkedIn</a></li>
@@ -172,7 +172,7 @@
     </section>
     <section id="slot-2">
       <div class="infrastructure">
-        <img src="assets/illustration-phones.svg">
+        <img src="assets/illustration-phones.svg" alt="Phones Illustration">
         <article>
           <h2>State of the Art Infrastructure</h2>
           <p>With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast
@@ -209,29 +209,33 @@
   <footer>
     <img src="assets/logo.svg" alt="Blogr Landing Page">
     <nav>
-      <!-- <div> -->
-      <ul>
+      <div>
         <h4>Product</h4>
-        <li><a href="#">Overview</a></li>
-        <li><a href="#">Pricing</a></li>
-        <li><a href="#">Marketplace</a></li>
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Integrations</a></li>
-      </ul>
-      <ul>
+        <ul class="footer-nav">
+          <li><a href="#">Overview</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+      <div>
         <h4>Company</h4>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Careers</a></li>
-      </ul>
-      <ul>
+        <ul class="footer-nav">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+      <div>
         <h4>Connect</h4>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Newsletter</a></li>
-        <li><a href="#">LinkedIn</a></li>
-      </ul>
-      <!-- </div> -->
+        <ul class="footer-nav">
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">LinkedIn</a></li>
+        </ul>
+      </div>
     </nav>
   </footer>
   <script src="script.js"></script>

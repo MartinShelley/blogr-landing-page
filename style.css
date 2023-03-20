@@ -341,6 +341,9 @@ footer nav {
   width: 825px;
   font-family: "Ubuntu", "Overpass";
 }
+footer nav .footer-nav {
+  grid-row: 2/3;
+}
 footer nav h4 {
   margin-bottom: 21px;
   color: #fff;
